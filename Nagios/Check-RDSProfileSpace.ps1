@@ -36,4 +36,4 @@ $Disks | ForEach-Object {
 Write-Host 'RDS Users Profile Space is at' $Notify 'Levels'
 $Disks | Where-Object {$_.'Free(%)' -le $WarningLevel}| Sort-Object 'Free(%)' | Format-Table Name, 'Capacity(GB)', 'FreeSpace(GB)', 'Free(%)' -AutoSize
 
-$Nagios
+exit $Nagios
